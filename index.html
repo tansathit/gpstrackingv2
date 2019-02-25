@@ -77,6 +77,8 @@
     var formLng = '328531020';
     var formText = '445527557';
     var formOrderNo = '508187306';
+    var formMethod = '1994150821';
+    var formRiderName = '1640105652';
     var gsheet = '1pkXqeRyOfe5ldUaxcN8K2TYioATgtIFG9OA6-aL7RzE';
 
     //Add a basemap
@@ -125,10 +127,25 @@
             event.preventDefault();
             var descrip = $( "input[type=radio][name=options]:checked" ).val();
             var orderno = $('#descrip').val();
+            var method = $( "input[type=radio][name=method]:checked" ).val();
+            var ridername = $('#ridername').val();
+            var foundError = 0;
             //console.log(descrip);
             if (descrip && orderno) {
               //console.log(descrip);
-              $('#formdiv').html('<iframe src="https://docs.google.com/forms/d/e/' + formId + '/formResponse?entry.' + formLat + '=' + lat + '&entry.' + formLng + '=' + lng + '&entry.'+ formText + '=' + descrip + '&entry.'+ formOrderNo + '=' + orderno + '&submit=Submit" seamless scrolling="no" style="overflow:hidden;height:375px;border:lightgray solid thin;"></iframe>');
+              
+              if (descrip == "option4") {
+                if (method && ridername) {
+                  foundError = 0;
+                } else {
+                  foundError = 1;
+                  $('#formHelp').html('<span style="color:red;">กรุณาใส่ข้อมูลให้ครบถ้วน</span>')
+                }
+              }
+              
+              if (foundError == 0) {
+                $('#formdiv').html('<iframe src="https://docs.google.com/forms/d/e/' + formId + '/formResponse?entry.' + formLat + '=' + lat + '&entry.' + formLng + '=' + lng + '&entry.'+ formText + '=' + descrip + '&entry.'+ formOrderNo + '=' + orderno + '&submit=Submit" seamless scrolling="no" style="overflow:hidden;height:375px;border:lightgray solid thin;"></iframe>');
+              }
             } else {
               $('#formHelp').html('<span style="color:red;">กรุณาใส่ข้อมูลให้ครบถ้วน</span>')
             }
