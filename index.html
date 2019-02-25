@@ -50,6 +50,7 @@
   
   <script type="text/javascript">
   var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+  var globalHash = {}
   alert(hashParams);
   alert(hashParams.length);
   for (var i = 0; i < hashParams.length; i++) {
@@ -59,11 +60,11 @@
     alert("check1");
     alert(decodeURIComponent(p[1]));
     alert("check2");
-    alert(document.getElementById(p[0]).value);
+    alert(globalHash);
     alert("check3");
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+    globalHash[p[0]] = decodeURIComponent(p[1]);
     alert(p[0]);
-    alert(document.getElementById(p[0]).value);
+    alert(globalHash.p[0]);
   }
     
   function yesnoCheck() {
