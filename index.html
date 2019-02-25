@@ -28,7 +28,7 @@
   <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
   <style>
     *{font-family: 'Source Sans Pro', sans-serif;}
-    .map {height:70%}
+    .map {height:90%}
     #map {position:relative;height:700px;}
     .leaflet-popup-content {font-size: medium;}
     .form-group{width:250px;margin-bottom:0;}
@@ -72,7 +72,7 @@
 
     //Add a basemap
     var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    	maxZoom: 10,
+    	maxZoom: 17,
     	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
