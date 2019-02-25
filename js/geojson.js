@@ -47,6 +47,13 @@
 
     return settings;
   }
+  
+  function show1(){
+    document.getElementById('div1').style.display ='none';
+  }
+  function show2(){
+    document.getElementById('div1').style.display = 'block';
+  }
 
   // Adds the optional GeoJSON properties crs and bbox
   // if they have been specified
