@@ -63,6 +63,8 @@
   function yesnoCheck() {
       if (document.getElementById('option4').checked) {
           document.getElementById('ifYes').style.display = 'block';
+          alert("ARMTEST");
+          alert(document.getElementById("ridername").value);
           document.getElementById("ridername").defaultValue = document.getElementById("ridername").value;
       }
       else document.getElementById('ifYes').style.display = 'none';
