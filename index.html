@@ -35,7 +35,7 @@
     .form-control{resize:none;}
     .text-muted{font-size:smaller;}
     hr {margin: 10px 0;}
-
+    .hideDiv{display:none;}  
   </style>
 </head>
 
@@ -90,9 +90,9 @@
 
       $(document).ready(function(){
         $('input[type="radio"]').click(function(){
-    	    var demovalue = $(this).val();
-          $("div.hideDiv").hide();
           $("#div1").show();
+          $("#hideDiv").show();
+          $("div.hideDiv").show();
         });
       });
       
