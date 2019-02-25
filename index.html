@@ -49,13 +49,7 @@
   <div id="footer" data-tracking-area="footer" style="display:none;">
     
   <script>
-  $(document).ready(function(){
-    $('input[type="radio"]').click(function(){
-    	var demovalue = $(this).val();
-      $("div.hideDiv").hide();
-      $("div.div1").show();
-    });
-  });
+
   </script>
     
   <script>
@@ -94,12 +88,11 @@
       lat = e.latlng.lat;
       lng = e.latlng.lng;
 
-      $(function(){
-        $('#option1').on('click',function(){
-          $('#div1').hide();
-        });
-        $('#option4').on('click',function(){
-          $('#div1').show();
+      $(document).ready(function(){
+        $('input[type="radio"]').click(function(){
+    	    var demovalue = $(this).val();
+          $("div.hideDiv").hide();
+          $("#div1").show();
         });
       });
       
