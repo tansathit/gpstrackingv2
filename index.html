@@ -77,14 +77,7 @@
     loc.start();
 
     var marker, circle, lat, lng; //create variables used throughout the map
-
-    function show1(){
-      document.getElementById('div1').style.display ='none';
-    }
-    function show2(){
-      document.getElementById('div1').style.display = 'block';
-    }
-    
+   
     function collectData(e) {
       //console.log(e);
       lat = e.latlng.lat;
@@ -177,6 +170,13 @@
       },
     });
 
+    function show1(){
+      document.getElementById('div1').style.display ='none';
+    }
+    function show2(){
+      document.getElementById('div1').style.display = 'block';
+    }    
+    
   </script>
 </body>
 
