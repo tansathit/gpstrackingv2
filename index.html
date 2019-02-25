@@ -29,7 +29,7 @@
   <style>
     *{font-family: 'Source Sans Pro', sans-serif;}
     .map {height:70%}
-    #map {position:relative;height:400px;}
+    #map {position:relative;height:700px;}
     .leaflet-popup-content {font-size: medium;}
     .form-group{width:250px;margin-bottom:0;}
     .form-control{resize:none;}
@@ -53,7 +53,7 @@
   function yesnoCheck() {
       if (document.getElementById('option4').checked) {
           document.getElementById('ifYes').style.display = 'block';
-          document.getElementById("ridername").defaultValue = getParameterByName(ridername);
+          document.getElementById("ridername").defaultValue = "ARMTEST";
       }
       else document.getElementById('ifYes').style.display = 'none';
 
