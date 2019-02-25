@@ -52,9 +52,11 @@
   var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
   alert(hashParams);
   alert(hashParams.length);
-  for(var i = 0; i < hashParams.length; i++){
+  for (var i = 0; i < hashParams.length; i++) {
+    alert("ARM HERE");
     var p = hashParams[i].split('=');
-    document.getElementById(p[0]).value = decodeURIComponent(p[1]);
+    alert(p);
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
     alert(p[0]);
     alert(document.getElementById(p[0]).value);
   }
