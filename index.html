@@ -56,6 +56,10 @@
     globalHash[p[0]] = decodeURIComponent(p[1]);
   }
 
+  window.onload = function(){
+    document.getElementById("descrip").value = globalHash.orderno;
+  }
+    
   function yesnoCheck() {
       if (document.getElementById('option4').checked) {
           document.getElementById('ifYes').style.display = 'block';
