@@ -56,6 +56,10 @@
     globalHash[p[0]] = decodeURIComponent(p[1]);
   }
     
+  if(globalHash.orderno){
+    document.getElementById("descrip").defaultValue = globalHash.orderno;
+  }
+    
   function yesnoCheck() {
       if (document.getElementById('option4').checked) {
           document.getElementById('ifYes').style.display = 'block';
@@ -64,10 +68,6 @@
           }
       }
       else document.getElementById('ifYes').style.display = 'none';
-
-      if(globalHash.orderno){
-        document.getElementById("descrip").defaultValue = globalHash.orderno;
-      }
   }
   
   </script>
